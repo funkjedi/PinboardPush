@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Pinboard Push Options</title>
+  <link rel="stylesheet" href="css/chrome-bootstrap.css">
+  <script type="text/javascript" src="lib/jquery-1.9.0.js"></script>
+  <script type="text/javascript" src="options.js"></script>
+  <style type="text/css">
+    h1 {margin-bottom: 0}
+    #wrap {margin: 10px 25px}
+    #wrap p {margin: 3px 0 25px}
+  </style>
+</head>
+<body class="frame">
+
+<h1 style="margin-bottom: 0">Pinboard Push</h1>
+<div id="wrap">
+  <p>
+    When you create or update a bookmark in Chrome Pinboard Push
+    will send that information to Pinboard.
+  </p>
+  <div id="status"></div>
+  <div>
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <select name="application">
+      <option value="pinboard">Pinboard</option>
+    </select>
+    <button name="save">Save</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Pinboard Push",
+  "version": "0.1.1",
+  "description": "An extension that pushes new bookmarks and bookmark changes to Pinboard.",
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "https://api.pinboard.in/v1/*",
+    "bookmarks"
+  ],
+  "icons": {
+    "16": "img/16x16.png",
+    "48": "img/48x48.png",
+    "128": "img/128x128.png"
+  },
+  "manifest_version": 2
+}
