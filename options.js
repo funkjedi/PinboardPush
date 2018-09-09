@@ -1,24 +1,15 @@
 
-// Restores select box state to saved value from localStorage.
-function restore_options() {
-  $("input[name=username]").val(localStorage["pinboard_username"]);
-  $("input[name=password]").val(localStorage["pinboard_password"]);
-  $("input[name=application]").val(localStorage["pinboard_application"]);
-}
+document.querySelector('button').addEventListener('click', function() {
+  localStorage['pinboard_username'] = document.querySelector('input[name=username]').value;
+  localStorage['pinboard_password'] = document.querySelector('input[name=password]').value;
 
+  document.querySelector('.alert').style.display = 'block';
 
-// Saves options to localStorage.
-function save_options() {
-  localStorage["pinboard_username"] = $("input[name=username]").val();
-  localStorage["pinboard_password"] = $("input[name=password]").val();
-  localStorage["pinboard_application"] = $("input[name=application]").val();
-
-  // Update status to let user know options were saved.
-  $("#status").html("<p><strong>Options Saved</strong></p>");
-}
-
-
-$(function() {
-    restore_options();
-    $("button[name=save]").on("click", save_options);
+  setTimeout(function() {
+    document.querySelector('.alert').style.display = 'none';
+  }, 4000);
 });
+
+
+document.querySelector('input[name=username]').value = localStorage['pinboard_username'] || '';
+document.querySelector('input[name=password]').value = localStorage['pinboard_password'] || '';
